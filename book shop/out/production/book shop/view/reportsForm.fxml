@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="smallContext" prefHeight="547.0" prefWidth="727.0" style="-fx-background-color: #051b2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <TableView layoutX="21.0" layoutY="354.0" prefHeight="136.0" prefWidth="685.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Item Code" />
+          <TableColumn prefWidth="167.0" text="Item Name" />
+            <TableColumn prefWidth="146.0" text="One item Price" />
+            <TableColumn prefWidth="127.0" text="Qty" />
+            <TableColumn prefWidth="169.0" text="Profit" />
+        </columns>
+      </TableView>
+      <LineChart layoutY="24.0" prefHeight="327.0" prefWidth="685.0">
+        <xAxis>
+          <CategoryAxis prefHeight="14.0" prefWidth="443.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Line endX="-65.0" endY="-69.0" layoutX="146.0" layoutY="287.0" startX="-100.0" />
+      <Line endX="-74.29290771484375" endY="-79.70712280273438" layoutX="156.0" layoutY="297.0" startX="-72.70712280273438" startY="-49.29290771484375" />
+      <Line endX="-65.0" endY="-69.0" layoutX="184.0" layoutY="247.0" startX="-100.0" />
+      <Line endX="-100.29287719726562" endY="-69.70712280273438" layoutX="220.0" layoutY="247.0" startX="-87.0" startY="-11.0" />
+      <Line endX="-63.0" endY="-74.0" layoutX="234.0" layoutY="235.0" startX="-100.0" />
+      <Line endX="-116.0" endY="-78.0" layoutX="287.0" layoutY="241.0" startX="-56.0" startY="-78.0" />
+      <Line endX="-82.0" endY="-43.0" layoutX="452.0" layoutY="258.0" startX="-134.0" startY="-15.0" />
+      <Line endX="-111.0" endY="-47.0" layoutX="343.0" layoutY="211.0" startX="-100.0" />
+      <Line endX="-65.0" endY="-69.0" layoutX="344.0" layoutY="212.0" startX="-100.0" />
+      <Line endX="-145.29290771484375" endY="-55.707122802734375" layoutX="425.0" layoutY="198.0" startX="-108.0" startY="46.0" />
+      <Line endX="-65.0" endY="-69.0" layoutX="471.0" layoutY="212.0" startX="-101.0" startY="2.0" />
+      <Line endX="-23.0" endY="-27.0" layoutX="507.0" layoutY="141.0" startX="-100.0" />
+      <Line endX="-4.0" layoutX="585.0" layoutY="112.0" startX="-100.29290771484375" startY="1.2928924560546875" />
+   </children>
+</AnchorPane>

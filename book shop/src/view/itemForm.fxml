@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="samllContext" prefHeight="547.0" prefWidth="727.0" style="-fx-background-color: #051b2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="76.0" layoutX="17.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="697.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#94b5dd" />
+                  <Stop color="#94b5dd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="86.0" layoutX="17.0" layoutY="337.0" stroke="BLACK" strokeType="INSIDE" width="697.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#bcd0e8" />
+                  <Stop color="#94b5dd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="86.0" layoutX="16.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="697.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#94b5dd" />
+                  <Stop color="#94b5dd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <TableView fx:id="tblItem" layoutX="17.0" layoutY="34.0" prefHeight="150.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="117.0" text="Item Code" />
+          <TableColumn fx:id="colItemName" prefWidth="272.0" text="Item Name" />
+            <TableColumn fx:id="colItemPrice" prefWidth="182.0" text="Item Price" />
+            <TableColumn fx:id="colItemQty" prefWidth="124.0" text="Qty" />
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="315.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #7b7bee;" text="Update Item">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#16105a" glyphName="RETWEET" size="20" text="    " wrappingWidth="66.4285717010498" />
+         </graphic>
+      </Label>
+      <Label layoutX="17.0" layoutY="196.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #7b7bee;" text="Add New Item">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#16105a" glyphName="PLUS" size="20" text="    " wrappingWidth="48.7142858505249" />
+         </graphic>
+      </Label>
+      <Label layoutX="18.0" layoutY="436.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #76b199;" text="Delete Item" textFill="#4d1313">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#9a0101" glyphName="TRASH" size="20" text="     " wrappingWidth="67.7142858505249" />
+         </graphic>
+      </Label>
+      <JFXTextField fx:id="txtAddItemCode" focusColor="BLACK" layoutX="51.0" layoutY="243.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="82.0" promptText="Code">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddItemName" focusColor="BLACK" layoutX="147.0" layoutY="243.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="187.0" promptText="Item Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddItemPrice" focusColor="BLACK" layoutX="346.0" layoutY="243.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="144.0" promptText="Item Price">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddItem" buttonType="RAISED" layoutX="597.0" layoutY="265.0" onAction="#btnAddItemOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #16105a;" text="   Add" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="598.0" layoutY="388.0" onAction="#btnUpdateItemOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #16105a;" text="   Update" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="597.0" layoutY="498.0" onAction="#DeleteItemOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #961a1a;" text="     Delete" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtAddItemQty" alignment="CENTER_RIGHT" focusColor="BLACK" layoutX="512.0" layoutY="242.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="75.0" promptText="Qty">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateItemName" focusColor="BLACK" layoutX="147.0" layoutY="360.0" prefHeight="29.0" prefWidth="187.0" promptText="Item Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateItemPrice" focusColor="BLACK" layoutX="347.0" layoutY="359.0" prefHeight="23.0" prefWidth="144.0" promptText="Item Price">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateItemQty" alignment="CENTER_RIGHT" focusColor="BLACK" layoutX="515.0" layoutY="358.0" prefHeight="23.0" prefWidth="75.0" promptText="Qty">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDeleteItemName" focusColor="BLACK" layoutX="154.0" layoutY="471.0" prefHeight="29.0" prefWidth="187.0" promptText="Item Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="17.0" layoutY="188.0" opacity="0.5" prefHeight="5.0" prefWidth="697.0" style="-fx-background-color: #000000;" />
+      <FontAwesomeIconView fill="#fff6f6" glyphName="TRASH" layoutX="613.0" layoutY="519.0" size="16" wrappingWidth="13.571428298950195" />
+      <FontAwesomeIconView fill="WHITE" glyphName="RETWEET" layoutX="608.0" layoutY="408.0" size="16" wrappingWidth="13.571428298950195" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="614.0" layoutY="286.0" size="16" wrappingWidth="13.571428298950195" />
+      <JFXComboBox fx:id="cmdDeleteItemCode" layoutX="51.0" layoutY="475.0" prefHeight="25.0" prefWidth="82.0" promptText="Code" />
+      <JFXTextField fx:id="txtDeleteItemPrice" focusColor="BLACK" layoutX="351.0" layoutY="472.0" prefHeight="23.0" prefWidth="144.0" promptText="Item Price">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDeleteItemQty" alignment="CENTER_RIGHT" focusColor="BLACK" layoutX="516.0" layoutY="471.0" prefHeight="23.0" prefWidth="75.0" promptText="Qty">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmdUpdateItemCode" layoutX="51.0" layoutY="364.0" prefHeight="25.0" prefWidth="82.0" promptText="Code" />
+   </children>
+</AnchorPane>

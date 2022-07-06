@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="smallContext" prefHeight="547.0" prefWidth="727.0" style="-fx-background-color: #051b2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerForContraller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9d9e7" height="78.0" layoutX="16.0" layoutY="462.0" stroke="BLACK" strokeType="INSIDE" width="697.0" />
+      <Label layoutX="17.0" layoutY="440.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #76b199;" text="Delete Customer" textFill="#570202">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#9a0101" glyphName="TRASH" size="20" text="   " wrappingWidth="47.7142858505249" />
+         </graphic></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9d9e7" height="85.0" layoutX="16.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" width="697.0" />
+      <Label layoutX="17.0" layoutY="327.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #7b7bee;" text="Update Customer">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#15002f" glyphName="RETWEET" size="20" text="   " wrappingWidth="42.428571701049805" />
+         </graphic>
+      </Label>
+      <JFXTextField fx:id="txtUpdateCustomerContact" focusColor="BLACK" layoutX="503.0" layoutY="363.0" prefHeight="23.0" prefWidth="116.0" promptText="Contact No">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateCustomerAddress" focusColor="BLACK" layoutX="296.0" layoutY="363.0" prefHeight="29.0" prefWidth="183.0" promptText="Address">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateCustomerName" focusColor="BLACK" layoutX="142.0" layoutY="363.0" prefHeight="23.0" prefWidth="144.0" promptText="Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="595.0" layoutY="398.0" onAction="#customerUpdateOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #091653;" text="   Update" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="RETWEET" size="16" wrappingWidth="13.571428298950195" />
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtDeleteCustomerName" focusColor="BLACK" layoutX="142.0" layoutY="472.0" prefHeight="29.0" prefWidth="144.0" promptText="Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblCustomer" layoutX="17.0" layoutY="43.0" prefHeight="159.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="92.0" text="ID" />
+          <TableColumn fx:id="colCustomerName" prefWidth="164.0" text="Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="269.0" text="Address" />
+            <TableColumn fx:id="colCustomerContact" prefWidth="169.0" text="Contact No" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="595.0" layoutY="505.0" onAction="#doneDeleteOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #5a0909;" text="   Delete" textFill="#f8f8f8">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="16" wrappingWidth="13.571428298950195" />
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" layoutX="16.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="697.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#8cb2cd" />
+                  <Stop color="#b9d9e7" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Label layoutX="17.0" layoutY="215.0" prefHeight="23.0" prefWidth="695.0" style="-fx-background-color: #7b7bee;" text="Add Customer">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#091653" glyphName="PLUS" size="20" text="   " wrappingWidth="70.7142858505249" />
+         </graphic>
+      </Label>
+      <JFXTextField fx:id="txtAddCustomerId" focusColor="BLACK" layoutX="35.0" layoutY="252.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="82.0" promptText="ID">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddCustomerContact" focusColor="BLACK" layoutX="503.0" layoutY="252.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="116.0" promptText="Contact No">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddCustomerAddress" focusColor="BLACK" layoutX="296.0" layoutY="252.0" onKeyReleased="#textFields_Key_Released" prefHeight="29.0" prefWidth="183.0" promptText="Address">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddCustomerName" focusColor="BLACK" layoutX="139.0" layoutY="252.0" onKeyReleased="#textFields_Key_Released" prefHeight="23.0" prefWidth="144.0" promptText="Name">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnCustomerAdd" buttonType="RAISED" layoutX="595.0" layoutY="287.0" onAction="#customerAddOnAction" prefHeight="29.0" prefWidth="109.0" style="-fx-background-color: #091653;" text="    Add" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="16" wrappingWidth="13.571428298950195" />
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtDeleteCustomerContact" focusColor="BLACK" layoutX="513.0" layoutY="471.0" prefHeight="23.0" prefWidth="116.0" promptText="Contact No">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDeleteCustomerAddress" focusColor="BLACK" layoutX="302.0" layoutY="471.0" prefHeight="29.0" prefWidth="183.0" promptText="Address">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbUpdateCustomerId" layoutX="35.0" layoutY="367.0" prefHeight="25.0" prefWidth="82.0" promptText="ID" />
+      <JFXComboBox fx:id="cmbDeleteteCustomerId" layoutX="34.0" layoutY="476.0" prefHeight="25.0" prefWidth="82.0" promptText="ID" />
+   </children>
+</AnchorPane>
